@@ -1,0 +1,15 @@
+server:
+  port: 8081 # Auth 服务运行在 8081
+
+spring:
+  application:
+    name: auth-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres  # 修改为你的数据库账号
+    password: 123456  # 修改为你的数据库密码
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update # 开发阶段自动建表
+    show-sql: true

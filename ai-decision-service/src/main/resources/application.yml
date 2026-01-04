@@ -1,0 +1,26 @@
+server:
+  port: 8084
+
+spring:
+  application:
+    name: ai-decision-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+
+# DeepSeek API 配置
+deepseek:
+  api-key: ${DEEPSEEK_API_KEY:sk-de4efd383fd8489f8cbc9a3245ca174d}
+  base-url: https://api.deepseek.com
+
+# 讯飞语音识别配置
+xunfei:
+  appid: ${XUNFEI_APPID:0c6269cf}
+  api-key: ${XUNFEI_API_KEY:c1d487acfbd1fe66289f65c57a58a280}
+  api-secret: ${XUNFEI_API_SECRET:YzM2YjAzOTk3YjZlZTc3OTAxNzhiNzI4}

@@ -1,0 +1,24 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: device-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: 123456
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        # 🟢 修正点：Hibernate 6 不需要专用 PostGIS 方言
+        # 只要引入了 hibernate-spatial，标准方言会自动支持 geometry
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest

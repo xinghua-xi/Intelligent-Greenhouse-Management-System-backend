@@ -1,0 +1,65 @@
+# ========== 编译输出 ==========
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+
+# ========== IDE ==========
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+*.swp
+*.swo
+.project
+.classpath
+.settings/
+
+# ========== 敏感配置文件 ==========
+# 本地环境配置（包含数据库密码、API Key等）
+**/application-local.yml
+**/application-local.yaml
+**/application-local.properties
+**/application-dev.yml
+**/application-prod.yml
+**/*-secret.yml
+**/*-secret.properties
+
+# 环境变量文件
+.env
+.env.local
+.env.*.local
+*.env
+
+# ========== API Keys / 密钥 ==========
+**/secrets/
+**/credentials/
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+
+# ========== 日志文件 ==========
+logs/
+*.log
+*.log.*
+
+# ========== 系统文件 ==========
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ========== 依赖 ==========
+node_modules/
+.gradle/
+
+# ========== 临时文件 ==========
+tmp/
+temp/
+*.tmp
+*.bak
+*.backup
